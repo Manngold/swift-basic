@@ -40,3 +40,30 @@ class Person {
     }
 }
 ```
+
+## 상속의 사용과 override
+
+```
+class Student : Person {
+    var major = "Computer Science"
+
+    override func selfIntroduce() {
+        print("hi my name is \(name) and my major is \(major)")
+    }
+
+    override class func classMethod() {
+        print("this is overrided method")
+    }
+}
+
+
+var manngold : Student = Student()
+
+manngold.name = "manngold"
+
+manngold.selfIntroduce()
+```
+
+상속을 한 뒤, override 키워드를 사용해서 func, class func를 재정의 해서 사용할 수 있고 (다른 키워드의 메소드 override는 오류 발생)
+
+부모 클래스에 정의되어 있는 인스턴스를 선언했을 때, 오류가 발생한다
